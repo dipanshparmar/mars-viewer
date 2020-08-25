@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(44, 44, 44);
+
+  #notice {
+    position: absolute;
+    background: black;
+    color: white;
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5%;
+    visibility: hidden;
+
+    i {
+      font-size: 30px;
+    }
+
+    span {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    justify-content: center;
+    background: rgb(31, 31, 31);
+    color: whitesmoke;
+    align-items: center;
+  }
+
+  div#content {
+    display: flex;
+    justify-content: space-around;
+
+    div#info {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      background: black;
+
+      #buttons {
+        width: fit-content;
+
+        button {
+          padding: 3px 5px;
+          cursor: pointer;
+
+          i {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+  div#img {
+    display: flex;
+    justify-content: center;
+    height: 77vh;
+    align-items: center;
+
+    img {
+      height: 70vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    #notice {
+      visibility: visible;
+    }
+
+    // made all of them none because banner was not fitting correcting
+    header {
+      display: none;
+    }
+
+    div#content {
+      display: none;
+    }
+
+    div#img {
+      display: none;
+    }
+  }
+}
