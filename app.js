@@ -78,19 +78,27 @@ async function getDataFromAPI(url) {
 document.querySelector("#buttons").addEventListener("click", (event) => {
   // if clicked on previous button
   if (event.target.classList[0] === "previous") {
-    if (index === 0) {
-      index = images.length - 1;
+    if(images.length) {
+      if (index === 0) {
+        index = images.length - 1;
+      } else {
+        --index;
+      }
     } else {
-      --index;
+      index = 0;
     }
 
     // to update the content
     displayContent();
   } else if (event.target.classList[0] === "next") {
-    if (index === images.length - 1) {
-      index = 0;
+    if(images.length) {
+      if (index === images.length - 1) {
+        index = 0;
+      } else {
+        ++index;
+      }
     } else {
-      ++index;
+      index = 0;
     }
 
     // to update the content
